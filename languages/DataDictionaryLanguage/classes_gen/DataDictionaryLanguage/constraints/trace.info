@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root>
+    <file name="ConstraintsAspectDescriptor.java">
+      <unit at="13,0,31,0" name="DataDictionaryLanguage.constraints.ConstraintsAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:4066d16b-36cb-4d72-b0a0-3794d6420eea(DataDictionaryLanguage.constraints)/569590123101879700">
+    <file name="Set_Constraints.java">
+      <node id="569590123101879700" at="21,28,22,27" concept="9" />
+      <node id="569590123101879700" at="29,128,30,133" concept="4" />
+      <node id="569590123101879700" at="30,133,31,0" concept="6" />
+      <node id="569590123101879700" at="32,55,33,72" concept="1" />
+      <node id="569590123101879700" at="34,9,35,0" concept="6" />
+      <node id="569590123101879700" at="35,0,36,22" concept="5" />
+      <node id="569590123101880575" at="40,128,41,200" concept="5" />
+      <node id="569590123101879700" at="43,0,44,0" concept="7" trace="canBeParentBreakingPoint" />
+      <node id="569590123101879700" at="46,0,47,0" concept="7" trace="Set$EU" />
+      <node id="569590123101879700" at="47,0,48,0" concept="7" trace="Field$_u" />
+      <node id="569590123101879700" at="48,0,49,0" concept="7" trace="Aggregation$H2" />
+      <node id="569590123101879700" at="21,0,24,0" concept="0" trace="Set_Constraints#()V" />
+      <node id="569590123101879700" at="31,0,34,9" concept="2" />
+      <node id="569590123101879700" at="40,0,43,0" concept="8" trace="staticCanBeAParent#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="569590123101879700" at="28,0,38,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeParent;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="569590123101879700" at="26,105,38,6" concept="5" />
+      <node id="569590123101879700" at="25,0,40,0" concept="3" trace="calculateCanBeParentConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="569590123101879700" at="21,28,22,27" />
+      <scope id="569590123101879700" at="32,55,33,72" />
+      <scope id="569590123101879702" at="40,128,41,200" />
+      <scope id="569590123101879700" at="21,0,24,0" />
+      <scope id="569590123101879700" at="40,0,43,0">
+        <var name="childConcept" id="569590123101879700" />
+        <var name="childNode" id="569590123101879700" />
+        <var name="link" id="569590123101879700" />
+        <var name="node" id="569590123101879700" />
+      </scope>
+      <scope id="569590123101879700" at="29,128,36,22">
+        <var name="result" id="569590123101879700" />
+      </scope>
+      <scope id="569590123101879700" at="28,0,38,0">
+        <var name="checkingNodeContext" id="569590123101879700" />
+        <var name="context" id="569590123101879700" />
+      </scope>
+      <scope id="569590123101879700" at="26,105,38,6" />
+      <scope id="569590123101879700" at="25,0,40,0" />
+      <unit id="569590123101879700" at="45,0,50,0" name="DataDictionaryLanguage.constraints.Set_Constraints$CONCEPTS" />
+      <unit id="569590123101879700" at="27,15,38,5" name="DataDictionaryLanguage.constraints.Set_Constraints$1" />
+      <unit id="569590123101879700" at="20,0,51,0" name="DataDictionaryLanguage.constraints.Set_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:4066d16b-36cb-4d72-b0a0-3794d6420eea(DataDictionaryLanguage.constraints)/569590123104353019">
+    <file name="Aggregation_Constraints.java">
+      <node id="569590123104353019" at="21,36,22,35" concept="9" />
+      <node id="569590123104353019" at="29,128,30,133" concept="4" />
+      <node id="569590123104353019" at="30,133,31,0" concept="6" />
+      <node id="569590123104353019" at="32,55,33,72" concept="1" />
+      <node id="569590123104353019" at="34,9,35,0" concept="6" />
+      <node id="569590123104353019" at="35,0,36,22" concept="5" />
+      <node id="569590123104355265" at="40,128,41,110" concept="5" />
+      <node id="569590123104353019" at="43,0,44,0" concept="7" trace="canBeParentBreakingPoint" />
+      <node id="569590123104353019" at="46,0,47,0" concept="7" trace="Aggregation$H2" />
+      <node id="569590123104353019" at="21,0,24,0" concept="0" trace="Aggregation_Constraints#()V" />
+      <node id="569590123104353019" at="31,0,34,9" concept="2" />
+      <node id="569590123104353019" at="40,0,43,0" concept="8" trace="staticCanBeAParent#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="569590123104353019" at="28,0,38,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeParent;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="569590123104353019" at="26,105,38,6" concept="5" />
+      <node id="569590123104353019" at="25,0,40,0" concept="3" trace="calculateCanBeParentConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="569590123104353019" at="21,36,22,35" />
+      <scope id="569590123104353019" at="32,55,33,72" />
+      <scope id="569590123104354393" at="40,128,41,110" />
+      <scope id="569590123104353019" at="21,0,24,0" />
+      <scope id="569590123104353019" at="40,0,43,0">
+        <var name="childConcept" id="569590123104353019" />
+        <var name="childNode" id="569590123104353019" />
+        <var name="link" id="569590123104353019" />
+        <var name="node" id="569590123104353019" />
+      </scope>
+      <scope id="569590123104353019" at="29,128,36,22">
+        <var name="result" id="569590123104353019" />
+      </scope>
+      <scope id="569590123104353019" at="28,0,38,0">
+        <var name="checkingNodeContext" id="569590123104353019" />
+        <var name="context" id="569590123104353019" />
+      </scope>
+      <scope id="569590123104353019" at="26,105,38,6" />
+      <scope id="569590123104353019" at="25,0,40,0" />
+      <unit id="569590123104353019" at="45,0,48,0" name="DataDictionaryLanguage.constraints.Aggregation_Constraints$CONCEPTS" />
+      <unit id="569590123104353019" at="27,15,38,5" name="DataDictionaryLanguage.constraints.Aggregation_Constraints$1" />
+      <unit id="569590123104353019" at="20,0,49,0" name="DataDictionaryLanguage.constraints.Aggregation_Constraints" />
+    </file>
+  </root>
+</debug-info>
+
