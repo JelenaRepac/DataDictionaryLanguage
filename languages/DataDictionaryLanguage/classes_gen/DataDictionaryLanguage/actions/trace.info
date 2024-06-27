@@ -3,18 +3,19 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
   <root>
     <file name="ActionAspectDescriptorImpl.java">
-      <unit at="12,0,28,0" name="DataDictionaryLanguage.actions.ActionAspectDescriptorImpl" />
+      <unit at="12,0,30,0" name="DataDictionaryLanguage.actions.ActionAspectDescriptorImpl" />
     </file>
   </root>
   <root nodeRef="r:a87665aa-b646-4a82-9854-1e7cb27a5220(DataDictionaryLanguage.actions)/569590123104611884">
     <file name="node_factories_Field.java">
       <node id="569590123104611907" at="17,102,18,115" concept="2" />
       <node id="569590123104972259" at="18,115,19,165" concept="0" />
-      <node id="569590123104611884" at="24,0,25,0" concept="3" trace="StructureDefinition$$$" />
-      <node id="569590123104611884" at="28,0,29,0" concept="3" trace="name$MnvL" />
+      <node id="569590123104611884" at="24,0,25,0" concept="4" trace="StructureDefinition$$$" />
+      <node id="569590123104611884" at="28,0,29,0" concept="4" trace="name$MnvL" />
       <node id="569590123104611885" at="17,0,21,0" concept="1" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;ILorg/jetbrains/mps/openapi/model/SModel;)V" />
       <scope id="569590123104611885" at="17,102,19,165">
         <var name="nodeSd" id="569590123104611910" />
@@ -30,6 +31,28 @@
       <unit id="569590123104611884" at="27,0,30,0" name="DataDictionaryLanguage.actions.node_factories_Field$PROPS" />
       <unit id="569590123104611885" at="16,0,22,0" name="DataDictionaryLanguage.actions.node_factories_Field$NodeFactory_569590123104611885" />
       <unit id="569590123104611884" at="15,0,31,0" name="DataDictionaryLanguage.actions.node_factories_Field" />
+    </file>
+  </root>
+  <root nodeRef="r:a87665aa-b646-4a82-9854-1e7cb27a5220(DataDictionaryLanguage.actions)/569590123113481223">
+    <file name="node_factories_StructureDefinition.java">
+      <node id="7448261197722352577" at="15,102,16,43" concept="2" />
+      <node id="569590123113483428" at="16,43,17,172" concept="0" />
+      <node id="569590123113490238" at="17,172,18,0" concept="3" />
+      <node id="569590123113481223" at="23,0,24,0" concept="4" trace="name$MnvL" />
+      <node id="569590123113481224" at="15,0,20,0" concept="1" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;ILorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <scope id="569590123113481224" at="15,102,18,0">
+        <var name="DDnode" id="7448261197722352580" />
+      </scope>
+      <scope id="569590123113481224" at="15,0,20,0">
+        <var name="enclosingNode" id="569590123113481224" />
+        <var name="index" id="569590123113481224" />
+        <var name="model" id="569590123113481224" />
+        <var name="newNode" id="569590123113481224" />
+        <var name="sampleNode" id="569590123113481224" />
+      </scope>
+      <unit id="569590123113481223" at="22,0,25,0" name="DataDictionaryLanguage.actions.node_factories_StructureDefinition$PROPS" />
+      <unit id="569590123113481224" at="14,0,21,0" name="DataDictionaryLanguage.actions.node_factories_StructureDefinition$NodeFactory_569590123113481224" />
+      <unit id="569590123113481223" at="13,0,26,0" name="DataDictionaryLanguage.actions.node_factories_StructureDefinition" />
     </file>
   </root>
 </debug-info>

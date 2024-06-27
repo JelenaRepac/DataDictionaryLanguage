@@ -26,6 +26,10 @@
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
+      <concept id="1070534934090" name="jetbrains.mps.baseLanguage.structure.CastExpression" flags="nn" index="10QFUN">
+        <child id="1070534934091" name="type" index="10QFUM" />
+        <child id="1070534934092" name="expression" index="10QFUP" />
+      </concept>
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
@@ -39,6 +43,7 @@
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
+      <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
@@ -152,6 +157,61 @@
               </node>
             </node>
           </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="37WguZ" id="vB_NbVK0g7">
+    <property role="TrG5h" value="node_factories_StructureDefinition" />
+    <node concept="37WvkG" id="vB_NbVK0g8" role="37WGs$">
+      <ref role="37XkoT" to="ph1b:vB_NbUFFns" resolve="StructureDefinition" />
+      <node concept="37Y9Zx" id="vB_NbVK0g9" role="37ZfLb">
+        <node concept="3clFbS" id="vB_NbVK0ga" role="2VODD2">
+          <node concept="3cpWs8" id="6ttyxz4$fJ1" role="3cqZAp">
+            <node concept="3cpWsn" id="6ttyxz4$fJ4" role="3cpWs9">
+              <property role="TrG5h" value="DDnode" />
+              <node concept="3Tqbb2" id="6ttyxz4$fJ0" role="1tU5fm">
+                <ref role="ehGHo" to="ph1b:6O4MREmU8nZ" resolve="DataDictionary" />
+              </node>
+              <node concept="10QFUN" id="6ttyxz4$fM0" role="33vP2m">
+                <node concept="3Tqbb2" id="6ttyxz4$fNW" role="10QFUM">
+                  <ref role="ehGHo" to="ph1b:6O4MREmU8nZ" resolve="DataDictionary" />
+                </node>
+                <node concept="1r4N1M" id="6ttyxz4$fK7" role="10QFUP" />
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="vB_NbVK0M$" role="3cqZAp">
+            <node concept="37vLTI" id="vB_NbVK2qB" role="3clFbG">
+              <node concept="3cpWs3" id="vB_NbVK2HI" role="37vLTx">
+                <node concept="1eOMI4" id="vB_NbVK2Y6" role="3uHU7w">
+                  <node concept="3cpWs3" id="vB_NbVK5EA" role="1eOMHV">
+                    <node concept="3cmrfG" id="vB_NbVK5ED" role="3uHU7w">
+                      <property role="3cmrfH" value="1" />
+                    </node>
+                    <node concept="2OqwBi" id="vB_NbVK3nx" role="3uHU7B">
+                      <node concept="37vLTw" id="vB_NbVK3eB" role="2Oq$k0">
+                        <ref role="3cqZAo" node="6ttyxz4$fJ4" resolve="DDnode" />
+                      </node>
+                      <node concept="2qgKlT" id="vB_NbVK3FZ" role="2OqNvi">
+                        <ref role="37wK5l" to="wnzf:6O4MREmX0Ep" resolve="getNumberOfStructure" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="Xl_RD" id="vB_NbVK2rj" role="3uHU7B">
+                  <property role="Xl_RC" value="Structure-" />
+                </node>
+              </node>
+              <node concept="2OqwBi" id="vB_NbVK0X8" role="37vLTJ">
+                <node concept="1r4Lsj" id="vB_NbVK0Mz" role="2Oq$k0" />
+                <node concept="3TrcHB" id="vB_NbVK189" role="2OqNvi">
+                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbH" id="vB_NbVK2sY" role="3cqZAp" />
         </node>
       </node>
     </node>

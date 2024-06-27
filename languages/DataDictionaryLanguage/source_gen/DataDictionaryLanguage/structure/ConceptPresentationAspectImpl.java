@@ -12,6 +12,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AbstractDomain;
   private ConceptPresentation props_Aggregation;
   private ConceptPresentation props_Boolean;
+  private ConceptPresentation props_Character;
   private ConceptPresentation props_Constraint;
   private ConceptPresentation props_DataDictionary;
   private ConceptPresentation props_Date;
@@ -40,7 +41,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_AbstractDomain == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("Abstract Domain");
-          cpb.presentationByName();
           props_AbstractDomain = cpb.create();
         }
         return props_AbstractDomain;
@@ -60,6 +60,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Boolean = cpb.create();
         }
         return props_Boolean;
+      case LanguageConceptSwitch.Character:
+        if (props_Character == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Character domain");
+          cpb.presentationByName();
+          props_Character = cpb.create();
+        }
+        return props_Character;
       case LanguageConceptSwitch.Constraint:
         if (props_Constraint == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

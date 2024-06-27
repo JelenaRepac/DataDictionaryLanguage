@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="5i11kz92dp01xiefxqoz6xo72c7m99e">
-  <files names="TypesystemDescriptor.java:check_DataDictionary_NonTypesystemRule.java:check_ExclusiveSpecialization_NonTypesystemRule.java:check_Field_NonTypesystemRule.java:check_IStructure_NonTypesystemRule.java:check_NonExclusiveSpecialization_NonTypesystemRule.java:quick_fix_min_one_element_QuickFix.java" />
+<product version="3" modelHash="-7mkhv4rpf7nwprtaqc0aglyhmv8f0f0">
+  <files names="TypesystemDescriptor.java:check_DataDictionary_NonTypesystemRule.java:check_ExclusiveSpecialization_NonTypesystemRule.java:check_Field_NonTypesystemRule.java:check_IStructure_NonTypesystemRule.java:check_NonExclusiveSpecialization_NonTypesystemRule.java:check_StructureDefinition_NonTypesystemRule.java:quick_fix_min_one_element_QuickFix.java" />
 </product>
 

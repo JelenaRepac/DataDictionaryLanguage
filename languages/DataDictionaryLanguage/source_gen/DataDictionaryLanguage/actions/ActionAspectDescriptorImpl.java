@@ -18,6 +18,8 @@ public class ActionAspectDescriptorImpl extends BaseActionAspectDescriptor imple
       switch (concept.getName()) {
         case "Field":
           return Collections.<NodeFactory>singletonList(new node_factories_Field.NodeFactory_569590123104611885());
+        case "StructureDefinition":
+          return Collections.<NodeFactory>singletonList(new node_factories_StructureDefinition.NodeFactory_569590123113481224());
         default:
       }
     }

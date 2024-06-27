@@ -9,6 +9,7 @@
     <import index="ph1b" ref="r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
+    <import index="wnzf" ref="r:7c387098-5d62-4aad-b0a2-407a1374e124(DataDictionaryLanguage.behavior)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -135,6 +136,7 @@
       <concept id="1138411891628" name="jetbrains.mps.lang.smodel.structure.SNodeOperation" flags="nn" index="eCIE_">
         <child id="1144104376918" name="parameter" index="1xVPHs" />
       </concept>
+      <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="1171407110247" name="jetbrains.mps.lang.smodel.structure.Node_GetAncestorOperation" flags="nn" index="2Xjw5R" />
       <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
         <child id="1177027386292" name="conceptArgument" index="cj9EA" />
@@ -163,6 +165,14 @@
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
       <concept id="540871147943773365" name="jetbrains.mps.baseLanguage.collections.structure.SingleArgumentSequenceOperation" flags="nn" index="25WWJ4">
         <child id="540871147943773366" name="argument" index="25WWJ7" />
+      </concept>
+      <concept id="1153943597977" name="jetbrains.mps.baseLanguage.collections.structure.ForEachStatement" flags="nn" index="2Gpval">
+        <child id="1153944400369" name="variable" index="2Gsz3X" />
+        <child id="1153944424730" name="inputSequence" index="2GsD0m" />
+      </concept>
+      <concept id="1153944193378" name="jetbrains.mps.baseLanguage.collections.structure.ForEachVariable" flags="nr" index="2GrKxI" />
+      <concept id="1153944233411" name="jetbrains.mps.baseLanguage.collections.structure.ForEachVariableReference" flags="nn" index="2GrUjf">
+        <reference id="1153944258490" name="variable" index="2Gs0qQ" />
       </concept>
       <concept id="1160612413312" name="jetbrains.mps.baseLanguage.collections.structure.AddElementOperation" flags="nn" index="TSZUe" />
       <concept id="1162935959151" name="jetbrains.mps.baseLanguage.collections.structure.GetSizeOperation" flags="nn" index="34oBXx" />
@@ -415,7 +425,7 @@
               </node>
               <node concept="1mIQ4w" id="vB_NbVb9nL" role="2OqNvi">
                 <node concept="chp4Y" id="vB_NbVb9o9" role="cj9EA">
-                  <ref role="cht4Q" to="ph1b:vB_NbUBkaH" resolve="Text" />
+                  <ref role="cht4Q" to="ph1b:vB_NbVCLQ9" resolve="Text" />
                 </node>
               </node>
             </node>
@@ -554,7 +564,7 @@
                         </node>
                         <node concept="1mIQ4w" id="vB_NbVbn4G" role="2OqNvi">
                           <node concept="chp4Y" id="vB_NbVbn4H" role="cj9EA">
-                            <ref role="cht4Q" to="ph1b:vB_NbUBkaH" resolve="Text" />
+                            <ref role="cht4Q" to="ph1b:vB_NbVCLQ9" resolve="Text" />
                           </node>
                         </node>
                       </node>
@@ -783,6 +793,49 @@
           </node>
         </node>
       </node>
+      <node concept="3cpWs8" id="vB_NbVJj_d" role="3cqZAp">
+        <node concept="3cpWsn" id="vB_NbVJj_g" role="3cpWs9">
+          <property role="TrG5h" value="structure" />
+          <node concept="3Tqbb2" id="vB_NbVJj_b" role="1tU5fm">
+            <ref role="ehGHo" to="ph1b:vB_NbUBp7d" resolve="IStructure" />
+          </node>
+          <node concept="2OqwBi" id="vB_NbVJjPb" role="33vP2m">
+            <node concept="1YBJjd" id="vB_NbVJjEa" role="2Oq$k0">
+              <ref role="1YBMHb" node="vB_NbVdfYj" resolve="field" />
+            </node>
+            <node concept="2Xjw5R" id="vB_NbVJkik" role="2OqNvi">
+              <node concept="1xMEDy" id="vB_NbVJkim" role="1xVPHs">
+                <node concept="chp4Y" id="vB_NbVJkwn" role="ri$Ld">
+                  <ref role="cht4Q" to="ph1b:vB_NbUBp7d" resolve="IStructure" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbJ" id="vB_NbVJkD$" role="3cqZAp">
+        <node concept="3clFbS" id="vB_NbVJkDA" role="3clFbx">
+          <node concept="2MkqsV" id="vB_NbVJlp9" role="3cqZAp">
+            <node concept="Xl_RD" id="vB_NbVJlpo" role="2MkJ7o">
+              <property role="Xl_RC" value="Field name must be unique in the structure" />
+            </node>
+            <node concept="1YBJjd" id="vB_NbVJlqp" role="1urrMF">
+              <ref role="1YBMHb" node="vB_NbVdfYj" resolve="field" />
+            </node>
+          </node>
+        </node>
+        <node concept="2OqwBi" id="vB_NbVJkSl" role="3clFbw">
+          <node concept="37vLTw" id="vB_NbVJkIj" role="2Oq$k0">
+            <ref role="3cqZAo" node="vB_NbVJj_g" resolve="structure" />
+          </node>
+          <node concept="2qgKlT" id="vB_NbVJleL" role="2OqNvi">
+            <ref role="37wK5l" to="wnzf:6ttyxz4A9A4" resolve="fieldNameAlreadyExist" />
+            <node concept="1YBJjd" id="vB_NbVJloj" role="37wK5m">
+              <ref role="1YBMHb" node="vB_NbVdfYj" resolve="field" />
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="1YaCAy" id="vB_NbVdfYj" role="1YuTPh">
       <property role="TrG5h" value="field" />
@@ -946,6 +999,134 @@
     <node concept="1YaCAy" id="vB_NbVx2Ug" role="1YuTPh">
       <property role="TrG5h" value="iStructure" />
       <ref role="1YaFvo" to="ph1b:vB_NbUBp7d" resolve="IStructure" />
+    </node>
+  </node>
+  <node concept="18kY7G" id="vB_NbVJFed">
+    <property role="TrG5h" value="check_StructureDefinition" />
+    <node concept="3clFbS" id="vB_NbVJFee" role="18ibNy">
+      <node concept="2Gpval" id="vB_NbVJFeR" role="3cqZAp">
+        <node concept="2GrKxI" id="vB_NbVJFeS" role="2Gsz3X">
+          <property role="TrG5h" value="structure" />
+        </node>
+        <node concept="2OqwBi" id="vB_NbVJFZl" role="2GsD0m">
+          <node concept="2OqwBi" id="vB_NbVJFqk" role="2Oq$k0">
+            <node concept="1YBJjd" id="vB_NbVJFg0" role="2Oq$k0">
+              <ref role="1YBMHb" node="vB_NbVJFeg" resolve="structureDefinition" />
+            </node>
+            <node concept="2Xjw5R" id="vB_NbVJFLt" role="2OqNvi">
+              <node concept="1xMEDy" id="vB_NbVJFLv" role="1xVPHs">
+                <node concept="chp4Y" id="vB_NbVJFNV" role="ri$Ld">
+                  <ref role="cht4Q" to="ph1b:6O4MREmU8nZ" resolve="DataDictionary" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3Tsc0h" id="vB_NbVJGoU" role="2OqNvi">
+            <ref role="3TtcxE" to="ph1b:vB_NbUFlS3" resolve="structures" />
+          </node>
+        </node>
+        <node concept="3clFbS" id="vB_NbVJFeU" role="2LFqv$">
+          <node concept="3clFbJ" id="vB_NbVJGts" role="3cqZAp">
+            <node concept="1Wc70l" id="vB_NbVJGJ7" role="3clFbw">
+              <node concept="2OqwBi" id="vB_NbVJJ8t" role="3uHU7w">
+                <node concept="2OqwBi" id="vB_NbVJGQa" role="2Oq$k0">
+                  <node concept="2GrUjf" id="vB_NbVJGLM" role="2Oq$k0">
+                    <ref role="2Gs0qQ" node="vB_NbVJFeS" resolve="structure" />
+                  </node>
+                  <node concept="3TrcHB" id="vB_NbVJH$y" role="2OqNvi">
+                    <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="vB_NbVJLzY" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
+                  <node concept="2OqwBi" id="vB_NbVJMgw" role="37wK5m">
+                    <node concept="1YBJjd" id="vB_NbVJLL0" role="2Oq$k0">
+                      <ref role="1YBMHb" node="vB_NbVJFeg" resolve="structureDefinition" />
+                    </node>
+                    <node concept="3TrcHB" id="vB_NbVJME2" role="2OqNvi">
+                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3y3z36" id="vB_NbVJGvI" role="3uHU7B">
+                <node concept="2GrUjf" id="vB_NbVJGtC" role="3uHU7B">
+                  <ref role="2Gs0qQ" node="vB_NbVJFeS" resolve="structure" />
+                </node>
+                <node concept="1YBJjd" id="vB_NbVJGBI" role="3uHU7w">
+                  <ref role="1YBMHb" node="vB_NbVJFeg" resolve="structureDefinition" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbS" id="vB_NbVJGtu" role="3clFbx">
+              <node concept="2MkqsV" id="vB_NbVJMJq" role="3cqZAp">
+                <node concept="Xl_RD" id="vB_NbVJMJA" role="2MkJ7o">
+                  <property role="Xl_RC" value="You must set unique name for structure!" />
+                </node>
+                <node concept="1YBJjd" id="vB_NbVJMKK" role="1urrMF">
+                  <ref role="1YBMHb" node="vB_NbVJFeg" resolve="structureDefinition" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1DcWWT" id="vB_NbVJMQo" role="3cqZAp">
+            <node concept="3clFbS" id="vB_NbVJMQq" role="2LFqv$">
+              <node concept="3cpWs8" id="vB_NbVJPCY" role="3cqZAp">
+                <node concept="3cpWsn" id="vB_NbVJPD1" role="3cpWs9">
+                  <property role="TrG5h" value="current" />
+                  <node concept="3Tqbb2" id="vB_NbVJPCW" role="1tU5fm">
+                    <ref role="ehGHo" to="ph1b:vB_NbUBeRZ" resolve="FieldDefinition" />
+                  </node>
+                  <node concept="37vLTw" id="vB_NbVJPDt" role="33vP2m">
+                    <ref role="3cqZAo" node="vB_NbVJMQr" resolve="fdDefinition" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbJ" id="vB_NbVJPLD" role="3cqZAp">
+                <node concept="3clFbS" id="vB_NbVJPLF" role="3clFbx">
+                  <node concept="2MkqsV" id="vB_NbVJUNw" role="3cqZAp">
+                    <node concept="Xl_RD" id="vB_NbVJUND" role="2MkJ7o">
+                      <property role="Xl_RC" value="Definition for this field already exists!" />
+                    </node>
+                    <node concept="37vLTw" id="vB_NbVJUOo" role="1urrMF">
+                      <ref role="3cqZAo" node="vB_NbVJPD1" resolve="current" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="2OqwBi" id="vB_NbVJPW5" role="3clFbw">
+                  <node concept="1YBJjd" id="vB_NbVJPLW" role="2Oq$k0">
+                    <ref role="1YBMHb" node="vB_NbVJFeg" resolve="structureDefinition" />
+                  </node>
+                  <node concept="2qgKlT" id="vB_NbVJRWn" role="2OqNvi">
+                    <ref role="37wK5l" to="wnzf:vB_NbVkm1g" resolve="fieldDefAlreadyExists" />
+                    <node concept="37vLTw" id="vB_NbVJTo2" role="37wK5m">
+                      <ref role="3cqZAo" node="vB_NbVJPD1" resolve="current" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3cpWsn" id="vB_NbVJMQr" role="1Duv9x">
+              <property role="TrG5h" value="fdDefinition" />
+              <node concept="3Tqbb2" id="vB_NbVJMVX" role="1tU5fm">
+                <ref role="ehGHo" to="ph1b:vB_NbUBeRZ" resolve="FieldDefinition" />
+              </node>
+            </node>
+            <node concept="2OqwBi" id="vB_NbVJNiF" role="1DdaDG">
+              <node concept="1YBJjd" id="vB_NbVJN03" role="2Oq$k0">
+                <ref role="1YBMHb" node="vB_NbVJFeg" resolve="structureDefinition" />
+              </node>
+              <node concept="3Tsc0h" id="vB_NbVJNVg" role="2OqNvi">
+                <ref role="3TtcxE" to="ph1b:vB_NbUFFnx" resolve="fieldDefinitions" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="vB_NbVJFeg" role="1YuTPh">
+      <property role="TrG5h" value="structureDefinition" />
+      <ref role="1YaFvo" to="ph1b:vB_NbUFFns" resolve="StructureDefinition" />
     </node>
   </node>
 </model>

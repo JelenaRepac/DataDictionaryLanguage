@@ -16,6 +16,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAbstractDomain = createDescriptorForAbstractDomain();
   /*package*/ final ConceptDescriptor myConceptAggregation = createDescriptorForAggregation();
   /*package*/ final ConceptDescriptor myConceptBoolean = createDescriptorForBoolean();
+  /*package*/ final ConceptDescriptor myConceptCharacter = createDescriptorForCharacter();
   /*package*/ final ConceptDescriptor myConceptConstraint = createDescriptorForConstraint();
   /*package*/ final ConceptDescriptor myConceptDataDictionary = createDescriptorForDataDictionary();
   /*package*/ final ConceptDescriptor myConceptDate = createDescriptorForDate();
@@ -48,7 +49,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractDomain, myConceptAggregation, myConceptBoolean, myConceptConstraint, myConceptDataDictionary, myConceptDate, myConceptDouble, myConceptExclusiveSpecialization, myConceptField, myConceptFieldDefinition, myConceptIElement, myConceptISpecialization, myConceptIStructure, myConceptInteger, myConceptNonExclusiveSpecialization, myConceptPredefinedDomain, myConceptSemanticDomain, myConceptSemanticDomainDefinition, myConceptSet, myConceptStructureDefinition, myConceptText);
+    return Arrays.asList(myConceptAbstractDomain, myConceptAggregation, myConceptBoolean, myConceptCharacter, myConceptConstraint, myConceptDataDictionary, myConceptDate, myConceptDouble, myConceptExclusiveSpecialization, myConceptField, myConceptFieldDefinition, myConceptIElement, myConceptISpecialization, myConceptIStructure, myConceptInteger, myConceptNonExclusiveSpecialization, myConceptPredefinedDomain, myConceptSemanticDomain, myConceptSemanticDomainDefinition, myConceptSet, myConceptStructureDefinition, myConceptText);
   }
 
   @Override
@@ -61,6 +62,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptAggregation;
       case LanguageConceptSwitch.Boolean:
         return myConceptBoolean;
+      case LanguageConceptSwitch.Character:
+        return myConceptCharacter;
       case LanguageConceptSwitch.Constraint:
         return myConceptConstraint;
       case LanguageConceptSwitch.DataDictionary:
@@ -109,7 +112,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   private static ConceptDescriptor createDescriptorForAbstractDomain() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "AbstractDomain", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9cee00L);
-    b.class_(false, false, false);
+    b.class_(false, true, false);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/569590123094404608");
     b.version(3);
@@ -130,7 +133,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9d42aeL);
     b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/569590123094446517");
     b.version(3);
-    b.alias("Boolean");
+    b.alias("BOOLEAN");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForCharacter() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "Character", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fb9148bdL);
+    b.class_(false, false, false);
+    // extends: DataDictionaryLanguage.structure.PredefinedDomain
+    b.super_(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9d42aeL);
+    b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/569590123110418621");
+    b.version(3);
+    b.alias("CHARACTER");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForConstraint() {
@@ -159,7 +172,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9d42aeL);
     b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/569590123094446533");
     b.version(3);
-    b.alias("Date");
+    b.alias("DATE");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDouble() {
@@ -169,7 +182,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9d42aeL);
     b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/569590123094446524");
     b.version(3);
-    b.alias("Double");
+    b.alias("DOUBLE");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForExclusiveSpecialization() {
@@ -230,7 +243,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9d42aeL);
     b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/569590123094446534");
     b.version(3);
-    b.alias("Integer");
+    b.alias("INTEGER");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForNonExclusiveSpecialization() {
@@ -289,13 +302,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForText() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "Text", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9d42adL);
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "Text", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fba31d89L);
     b.class_(false, false, false);
     // extends: DataDictionaryLanguage.structure.PredefinedDomain
     b.super_(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9d42aeL);
-    b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/569590123094426285");
+    b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/569590123111587209");
     b.version(3);
-    b.alias("Text");
+    b.alias("TEXT");
     return b.create();
   }
 }

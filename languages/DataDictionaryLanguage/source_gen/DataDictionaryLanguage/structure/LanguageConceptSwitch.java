@@ -12,30 +12,32 @@ public final class LanguageConceptSwitch {
   public static final int AbstractDomain = 0;
   public static final int Aggregation = 1;
   public static final int Boolean = 2;
-  public static final int Constraint = 3;
-  public static final int DataDictionary = 4;
-  public static final int Date = 5;
-  public static final int Double = 6;
-  public static final int ExclusiveSpecialization = 7;
-  public static final int Field = 8;
-  public static final int FieldDefinition = 9;
-  public static final int IElement = 10;
-  public static final int ISpecialization = 11;
-  public static final int IStructure = 12;
-  public static final int Integer = 13;
-  public static final int NonExclusiveSpecialization = 14;
-  public static final int PredefinedDomain = 15;
-  public static final int SemanticDomain = 16;
-  public static final int SemanticDomainDefinition = 17;
-  public static final int Set = 18;
-  public static final int StructureDefinition = 19;
-  public static final int Text = 20;
+  public static final int Character = 3;
+  public static final int Constraint = 4;
+  public static final int DataDictionary = 5;
+  public static final int Date = 6;
+  public static final int Double = 7;
+  public static final int ExclusiveSpecialization = 8;
+  public static final int Field = 9;
+  public static final int FieldDefinition = 10;
+  public static final int IElement = 11;
+  public static final int ISpecialization = 12;
+  public static final int IStructure = 13;
+  public static final int Integer = 14;
+  public static final int NonExclusiveSpecialization = 15;
+  public static final int PredefinedDomain = 16;
+  public static final int SemanticDomain = 17;
+  public static final int SemanticDomainDefinition = 18;
+  public static final int Set = 19;
+  public static final int StructureDefinition = 20;
+  public static final int Text = 21;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x83d7e20faa624554L, 0x9cc2d13247d6555eL);
     builder.put(0x7e79732fa9cee00L, AbstractDomain);
     builder.put(0x7e79732faab6c5eL, Aggregation);
     builder.put(0x7e79732fa9d91b5L, Boolean);
+    builder.put(0x7e79732fb9148bdL, Character);
     builder.put(0x7e79732fa9cee07L, Constraint);
     builder.put(0x6d04cb7a96e885ffL, DataDictionary);
     builder.put(0x7e79732fa9d91c5L, Date);
@@ -53,7 +55,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x7e79732fb07fa27L, SemanticDomainDefinition);
     builder.put(0x7e79732fb0ef7bfL, Set);
     builder.put(0x7e79732faaeb5dcL, StructureDefinition);
-    builder.put(0x7e79732fa9d42adL, Text);
+    builder.put(0x7e79732fba31d89L, Text);
     myIndex = builder.seal();
   }
 

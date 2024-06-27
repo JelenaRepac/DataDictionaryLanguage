@@ -50,6 +50,7 @@
     <property role="EcuMT" value="569590123094404608" />
     <property role="TrG5h" value="AbstractDomain" />
     <property role="R4oN_" value="Abstract Domain" />
+    <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="PrWs8" id="vB_NbUBeS1" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -67,7 +68,7 @@
   <node concept="1TIwiD" id="vB_NbUBp6P">
     <property role="EcuMT" value="569590123094446517" />
     <property role="TrG5h" value="Boolean" />
-    <property role="34LRSv" value="Boolean" />
+    <property role="34LRSv" value="BOOLEAN" />
     <property role="R4oN_" value="Boolean domain" />
     <ref role="1TJDcQ" node="vB_NbUBkaI" />
   </node>
@@ -115,14 +116,14 @@
   <node concept="1TIwiD" id="vB_NbUBp75">
     <property role="EcuMT" value="569590123094446533" />
     <property role="TrG5h" value="Date" />
-    <property role="34LRSv" value="Date" />
+    <property role="34LRSv" value="DATE" />
     <property role="R4oN_" value="Date Domain" />
     <ref role="1TJDcQ" node="vB_NbUBkaI" />
   </node>
   <node concept="1TIwiD" id="vB_NbUBp6W">
     <property role="EcuMT" value="569590123094446524" />
     <property role="TrG5h" value="Double" />
-    <property role="34LRSv" value="Double" />
+    <property role="34LRSv" value="DOUBLE" />
     <property role="R4oN_" value="Domain Double" />
     <ref role="1TJDcQ" node="vB_NbUBkaI" />
   </node>
@@ -170,7 +171,7 @@
   <node concept="1TIwiD" id="vB_NbUBp76">
     <property role="EcuMT" value="569590123094446534" />
     <property role="TrG5h" value="Integer" />
-    <property role="34LRSv" value="Integer" />
+    <property role="34LRSv" value="INTEGER" />
     <property role="R4oN_" value="Integer Domain" />
     <ref role="1TJDcQ" node="vB_NbUBkaI" />
   </node>
@@ -216,13 +217,6 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="vB_NbUBeRZ" resolve="FieldDefinition" />
     </node>
-  </node>
-  <node concept="1TIwiD" id="vB_NbUBkaH">
-    <property role="EcuMT" value="569590123094426285" />
-    <property role="TrG5h" value="Text" />
-    <property role="34LRSv" value="Text" />
-    <property role="R4oN_" value="Domain Text" />
-    <ref role="1TJDcQ" node="vB_NbUBkaI" resolve="PredefinedDomain" />
   </node>
   <node concept="1TIwiD" id="vB_NbV1ZCB">
     <property role="EcuMT" value="569590123101420071" />
@@ -292,6 +286,20 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="vB_NbV1ZCB" resolve="SemanticDomainDefinition" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="vB_NbV$kyX">
+    <property role="EcuMT" value="569590123110418621" />
+    <property role="TrG5h" value="Character" />
+    <property role="34LRSv" value="CHARACTER" />
+    <property role="R4oN_" value="Character domain" />
+    <ref role="1TJDcQ" node="vB_NbUBkaI" resolve="PredefinedDomain" />
+  </node>
+  <node concept="1TIwiD" id="vB_NbVCLQ9">
+    <property role="EcuMT" value="569590123111587209" />
+    <property role="TrG5h" value="Text" />
+    <property role="34LRSv" value="TEXT" />
+    <property role="R4oN_" value="Domain Text" />
+    <ref role="1TJDcQ" node="vB_NbUBkaI" resolve="PredefinedDomain" />
   </node>
 </model>
 

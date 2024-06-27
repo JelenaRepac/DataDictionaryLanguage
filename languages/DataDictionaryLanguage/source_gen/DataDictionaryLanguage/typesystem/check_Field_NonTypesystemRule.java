@@ -11,9 +11,12 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import DataDictionaryLanguage.behavior.IElement__BehaviorDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 import org.jetbrains.mps.openapi.language.SConcept;
 
 public class check_Field_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
@@ -40,6 +43,13 @@ public class check_Field_NonTypesystemRule extends AbstractNonTypesystemRule_Run
         IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(field, "Field name can not have more than 25 characters", "r:84c8e41f-b64d-4d63-b9bb-c3c67b06045b(DataDictionaryLanguage.typesystem)", "7855627377420998173", null, errorTarget);
       }
     }
+    SNode structure = SNodeOperations.getNodeAncestor(field, CONCEPTS.IStructure$N5, false, false);
+    if (IElement__BehaviorDescriptor.fieldNameAlreadyExist_id6ttyxz4A9A4.invoke(structure, field)) {
+      {
+        final MessageTarget errorTarget = new NodeMessageTarget();
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(field, "Field name must be unique in the structure", "r:84c8e41f-b64d-4d63-b9bb-c3c67b06045b(DataDictionaryLanguage.typesystem)", "569590123113305673", null, errorTarget);
+      }
+    }
   }
   public SAbstractConcept getApplicableConcept() {
     return CONCEPTS.Field$_u;
@@ -56,6 +66,7 @@ public class check_Field_NonTypesystemRule extends AbstractNonTypesystemRule_Run
   }
 
   private static final class CONCEPTS {
+    /*package*/ static final SInterfaceConcept IStructure$N5 = MetaAdapterFactory.getInterfaceConcept(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9d91cdL, "DataDictionaryLanguage.structure.IStructure");
     /*package*/ static final SConcept Field$_u = MetaAdapterFactory.getConcept(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9bc605L, "DataDictionaryLanguage.structure.Field");
   }
 }
