@@ -21,10 +21,12 @@ public class ConstraintsAspectDescriptor extends BaseConstraintsAspectDescriptor
       case 0:
         return new Aggregation_Constraints();
       case 1:
+        return new AndConstraint_Constraints();
+      case 2:
         return new Set_Constraints();
       default:
     }
     return new BaseConstraintsDescriptor(concept);
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732faab6c5eL), MetaIdFactory.conceptId(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fb0ef7bfL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732faab6c5eL), MetaIdFactory.conceptId(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0b348b4L), MetaIdFactory.conceptId(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fb0ef7bfL)).seal();
 }

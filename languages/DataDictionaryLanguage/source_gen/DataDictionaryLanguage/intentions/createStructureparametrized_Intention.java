@@ -72,10 +72,10 @@ public final class createStructureparametrized_Intention extends AbstractIntenti
       if (myParameter.equals("SET")) {
         nodeStructure = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fb0ef7bfL, "DataDictionaryLanguage.structure.Set"));
       }
-      if (myParameter.equals("EXCLUSIVE")) {
+      if (myParameter.equals("EXCLUSIVE SPECIALIZATION")) {
         nodeStructure = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fb16df4eL, "DataDictionaryLanguage.structure.ExclusiveSpecialization"));
       }
-      if (myParameter.equals("NON-EXCLUSIVE")) {
+      if (myParameter.equals("NON-EXCLUSIVE SPECIALIZATION")) {
         nodeStructure = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fb191829L, "DataDictionaryLanguage.structure.NonExclusiveSpecialization"));
       }
       if ((nodeStructure != null)) {

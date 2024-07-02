@@ -159,6 +159,9 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ngI" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -460,6 +463,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="vB_NbV1ZHS">
+    <property role="3GE5qa" value="domain-definition" />
     <ref role="13h7C2" to="ph1b:vB_NbV1ZCB" resolve="SemanticDomainDefinition" />
     <node concept="13hLZK" id="vB_NbV1ZHT" role="13h7CW">
       <node concept="3clFbS" id="vB_NbV1ZHU" role="2VODD2">
@@ -480,6 +484,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="vB_NbVcXFi">
+    <property role="3GE5qa" value="field-definition" />
     <ref role="13h7C2" to="ph1b:vB_NbUAWo5" resolve="Field" />
     <node concept="13i0hz" id="6ttyxz4Bgdl" role="13h7CS">
       <property role="TrG5h" value="createNewFieldDef" />
@@ -520,6 +525,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="vB_NbVcXKd">
+    <property role="3GE5qa" value="field-definition" />
     <ref role="13h7C2" to="ph1b:vB_NbUBeRZ" resolve="FieldDefinition" />
     <node concept="13hLZK" id="vB_NbVcXKe" role="13h7CW">
       <node concept="3clFbS" id="vB_NbVcXKf" role="2VODD2">
@@ -528,7 +534,7 @@
             <node concept="2ShNRf" id="vB_NbVcYic" role="37vLTx">
               <node concept="3zrR0B" id="vB_NbVcYtq" role="2ShVmc">
                 <node concept="3Tqbb2" id="vB_NbVcYts" role="3zrR0E">
-                  <ref role="ehGHo" to="ph1b:vB_NbVCLQ9" resolve="Text" />
+                  <ref role="ehGHo" to="ph1b:vB_NbVCLQ9" resolve="Varchar" />
                 </node>
               </node>
             </node>
@@ -544,6 +550,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="vB_NbVejnU">
+    <property role="3GE5qa" value="structure-definition" />
     <ref role="13h7C2" to="ph1b:vB_NbUFFns" resolve="StructureDefinition" />
     <node concept="13i0hz" id="vB_NbVejpE" role="13h7CS">
       <property role="TrG5h" value="getFieldCount" />
@@ -745,6 +752,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="vB_NbVeodL">
+    <property role="3GE5qa" value="structure-definition" />
     <ref role="13h7C2" to="ph1b:vB_NbUBp7d" resolve="IStructure" />
     <node concept="13i0hz" id="1frmgj2Kf3J" role="13h7CS">
       <property role="13i0it" value="true" />
@@ -1148,6 +1156,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="vB_NbVeEZY">
+    <property role="3GE5qa" value="structure-definition" />
     <ref role="13h7C2" to="ph1b:vB_NbUBeUX" resolve="IElement" />
     <node concept="13i0hz" id="1frmgj2KeNS" role="13h7CS">
       <property role="13i0it" value="true" />

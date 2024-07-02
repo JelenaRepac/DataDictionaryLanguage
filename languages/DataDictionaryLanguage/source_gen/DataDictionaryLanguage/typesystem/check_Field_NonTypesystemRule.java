@@ -30,10 +30,10 @@ public class check_Field_NonTypesystemRule extends AbstractNonTypesystemRule_Run
       }
     }
 
-    if (SPropertyOperations.getString(field, PROPS.name$MnvL).length() < 3) {
+    if (SPropertyOperations.getString(field, PROPS.name$MnvL).length() < 2) {
       {
         final MessageTarget errorTarget = new NodeMessageTarget();
-        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(field, "Field name must have more than 2 characters", "r:84c8e41f-b64d-4d63-b9bb-c3c67b06045b(DataDictionaryLanguage.typesystem)", "7855627377420988279", null, errorTarget);
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(field, "Field name must have more than 1 character", "r:84c8e41f-b64d-4d63-b9bb-c3c67b06045b(DataDictionaryLanguage.typesystem)", "7855627377420988279", null, errorTarget);
       }
     }
 

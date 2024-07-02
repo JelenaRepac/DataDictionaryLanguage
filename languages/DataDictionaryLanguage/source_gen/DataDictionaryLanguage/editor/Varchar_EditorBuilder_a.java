@@ -9,11 +9,11 @@ import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.editor.runtime.cells.BigCellUtil;
 
-/*package*/ class Text_EditorBuilder_a extends AbstractEditorBuilder {
+/*package*/ class Varchar_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
   private SNode myNode;
 
-  public Text_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
+  public Varchar_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
     super(context);
     myNode = node;
   }

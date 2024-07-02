@@ -42,8 +42,8 @@ public class check_DataDictionary_NonTypesystemRule extends AbstractNonTypesyste
       if (SNodeOperations.isInstanceOf(current, CONCEPTS.Boolean$8W)) {
         instance = "Boolean";
       }
-      if (SNodeOperations.isInstanceOf(current, CONCEPTS.Text$_k)) {
-        instance = "Text";
+      if (SNodeOperations.isInstanceOf(current, CONCEPTS.Varchar$_k)) {
+        instance = "Varchar";
       }
       if (SNodeOperations.isInstanceOf(current, CONCEPTS.Date$_2)) {
         instance = "Date";
@@ -62,7 +62,7 @@ public class check_DataDictionary_NonTypesystemRule extends AbstractNonTypesyste
               IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(node, "Duplicate boolean domains", "r:84c8e41f-b64d-4d63-b9bb-c3c67b06045b(DataDictionaryLanguage.typesystem)", "569590123103874682", null, errorTarget);
             }
           }
-          if (SNodeOperations.isInstanceOf(node, CONCEPTS.Text$_k) && instance == "Text") {
+          if (SNodeOperations.isInstanceOf(node, CONCEPTS.Varchar$_k) && instance == "Varchar") {
             {
               final MessageTarget errorTarget = new NodeMessageTarget();
               IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(node, "Duplicate text domains", "r:84c8e41f-b64d-4d63-b9bb-c3c67b06045b(DataDictionaryLanguage.typesystem)", "569590123103875363", null, errorTarget);
@@ -107,7 +107,7 @@ public class check_DataDictionary_NonTypesystemRule extends AbstractNonTypesyste
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept Boolean$8W = MetaAdapterFactory.getConcept(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9d91b5L, "DataDictionaryLanguage.structure.Boolean");
-    /*package*/ static final SConcept Text$_k = MetaAdapterFactory.getConcept(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fba31d89L, "DataDictionaryLanguage.structure.Text");
+    /*package*/ static final SConcept Varchar$_k = MetaAdapterFactory.getConcept(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fba31d89L, "DataDictionaryLanguage.structure.Varchar");
     /*package*/ static final SConcept Date$_2 = MetaAdapterFactory.getConcept(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9d91c5L, "DataDictionaryLanguage.structure.Date");
     /*package*/ static final SConcept Double$mw = MetaAdapterFactory.getConcept(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9d91bcL, "DataDictionaryLanguage.structure.Double");
     /*package*/ static final SConcept Integer$_x = MetaAdapterFactory.getConcept(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9d91c6L, "DataDictionaryLanguage.structure.Integer");

@@ -514,7 +514,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return editorCell;
   }
   private EditorCell createConstant_12() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Set:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Sets:");
     editorCell.setCellId("Constant_r8s0uu_a31a");
     Style style = new StyleImpl();
     new textBlueStyleClass(this).apply(style, editorCell);

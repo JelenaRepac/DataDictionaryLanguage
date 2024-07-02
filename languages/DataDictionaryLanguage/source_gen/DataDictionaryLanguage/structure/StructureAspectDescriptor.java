@@ -4,20 +4,28 @@ package DataDictionaryLanguage.structure;
 
 import jetbrains.mps.smodel.runtime.BaseStructureAspectDescriptor;
 import jetbrains.mps.smodel.runtime.ConceptDescriptor;
+import jetbrains.mps.smodel.runtime.EnumerationDescriptor;
 import java.util.Collection;
 import java.util.Arrays;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.adapter.ids.SConceptId;
+import jetbrains.mps.smodel.runtime.DataTypeDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
+import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAbstractDomain = createDescriptorForAbstractDomain();
   /*package*/ final ConceptDescriptor myConceptAggregation = createDescriptorForAggregation();
+  /*package*/ final ConceptDescriptor myConceptAndConstraint = createDescriptorForAndConstraint();
+  /*package*/ final ConceptDescriptor myConceptBetweenConstraint = createDescriptorForBetweenConstraint();
   /*package*/ final ConceptDescriptor myConceptBoolean = createDescriptorForBoolean();
   /*package*/ final ConceptDescriptor myConceptCharacter = createDescriptorForCharacter();
+  /*package*/ final ConceptDescriptor myConceptComparasionConstraint = createDescriptorForComparasionConstraint();
   /*package*/ final ConceptDescriptor myConceptConstraint = createDescriptorForConstraint();
+  /*package*/ final ConceptDescriptor myConceptConstraintCriterum = createDescriptorForConstraintCriterum();
+  /*package*/ final ConceptDescriptor myConceptConstraintOperator = createDescriptorForConstraintOperator();
   /*package*/ final ConceptDescriptor myConceptDataDictionary = createDescriptorForDataDictionary();
   /*package*/ final ConceptDescriptor myConceptDate = createDescriptorForDate();
   /*package*/ final ConceptDescriptor myConceptDouble = createDescriptorForDouble();
@@ -27,14 +35,19 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptIElement = createDescriptorForIElement();
   /*package*/ final ConceptDescriptor myConceptISpecialization = createDescriptorForISpecialization();
   /*package*/ final ConceptDescriptor myConceptIStructure = createDescriptorForIStructure();
+  /*package*/ final ConceptDescriptor myConceptInConstraint = createDescriptorForInConstraint();
+  /*package*/ final ConceptDescriptor myConceptInValue = createDescriptorForInValue();
   /*package*/ final ConceptDescriptor myConceptInteger = createDescriptorForInteger();
   /*package*/ final ConceptDescriptor myConceptNonExclusiveSpecialization = createDescriptorForNonExclusiveSpecialization();
+  /*package*/ final ConceptDescriptor myConceptNotNulConstraint = createDescriptorForNotNulConstraint();
+  /*package*/ final ConceptDescriptor myConceptOrConstraint = createDescriptorForOrConstraint();
   /*package*/ final ConceptDescriptor myConceptPredefinedDomain = createDescriptorForPredefinedDomain();
   /*package*/ final ConceptDescriptor myConceptSemanticDomain = createDescriptorForSemanticDomain();
   /*package*/ final ConceptDescriptor myConceptSemanticDomainDefinition = createDescriptorForSemanticDomainDefinition();
   /*package*/ final ConceptDescriptor myConceptSet = createDescriptorForSet();
   /*package*/ final ConceptDescriptor myConceptStructureDefinition = createDescriptorForStructureDefinition();
-  /*package*/ final ConceptDescriptor myConceptText = createDescriptorForText();
+  /*package*/ final ConceptDescriptor myConceptVarchar = createDescriptorForVarchar();
+  /*package*/ final EnumerationDescriptor myEnumerationOperations = new EnumerationDescriptor_Operations();
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -49,7 +62,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractDomain, myConceptAggregation, myConceptBoolean, myConceptCharacter, myConceptConstraint, myConceptDataDictionary, myConceptDate, myConceptDouble, myConceptExclusiveSpecialization, myConceptField, myConceptFieldDefinition, myConceptIElement, myConceptISpecialization, myConceptIStructure, myConceptInteger, myConceptNonExclusiveSpecialization, myConceptPredefinedDomain, myConceptSemanticDomain, myConceptSemanticDomainDefinition, myConceptSet, myConceptStructureDefinition, myConceptText);
+    return Arrays.asList(myConceptAbstractDomain, myConceptAggregation, myConceptAndConstraint, myConceptBetweenConstraint, myConceptBoolean, myConceptCharacter, myConceptComparasionConstraint, myConceptConstraint, myConceptConstraintCriterum, myConceptConstraintOperator, myConceptDataDictionary, myConceptDate, myConceptDouble, myConceptExclusiveSpecialization, myConceptField, myConceptFieldDefinition, myConceptIElement, myConceptISpecialization, myConceptIStructure, myConceptInConstraint, myConceptInValue, myConceptInteger, myConceptNonExclusiveSpecialization, myConceptNotNulConstraint, myConceptOrConstraint, myConceptPredefinedDomain, myConceptSemanticDomain, myConceptSemanticDomainDefinition, myConceptSet, myConceptStructureDefinition, myConceptVarchar);
   }
 
   @Override
@@ -60,12 +73,22 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptAbstractDomain;
       case LanguageConceptSwitch.Aggregation:
         return myConceptAggregation;
+      case LanguageConceptSwitch.AndConstraint:
+        return myConceptAndConstraint;
+      case LanguageConceptSwitch.BetweenConstraint:
+        return myConceptBetweenConstraint;
       case LanguageConceptSwitch.Boolean:
         return myConceptBoolean;
       case LanguageConceptSwitch.Character:
         return myConceptCharacter;
+      case LanguageConceptSwitch.ComparasionConstraint:
+        return myConceptComparasionConstraint;
       case LanguageConceptSwitch.Constraint:
         return myConceptConstraint;
+      case LanguageConceptSwitch.ConstraintCriterum:
+        return myConceptConstraintCriterum;
+      case LanguageConceptSwitch.ConstraintOperator:
+        return myConceptConstraintOperator;
       case LanguageConceptSwitch.DataDictionary:
         return myConceptDataDictionary;
       case LanguageConceptSwitch.Date:
@@ -84,10 +107,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptISpecialization;
       case LanguageConceptSwitch.IStructure:
         return myConceptIStructure;
+      case LanguageConceptSwitch.InConstraint:
+        return myConceptInConstraint;
+      case LanguageConceptSwitch.InValue:
+        return myConceptInValue;
       case LanguageConceptSwitch.Integer:
         return myConceptInteger;
       case LanguageConceptSwitch.NonExclusiveSpecialization:
         return myConceptNonExclusiveSpecialization;
+      case LanguageConceptSwitch.NotNulConstraint:
+        return myConceptNotNulConstraint;
+      case LanguageConceptSwitch.OrConstraint:
+        return myConceptOrConstraint;
       case LanguageConceptSwitch.PredefinedDomain:
         return myConceptPredefinedDomain;
       case LanguageConceptSwitch.SemanticDomain:
@@ -98,13 +129,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptSet;
       case LanguageConceptSwitch.StructureDefinition:
         return myConceptStructureDefinition;
-      case LanguageConceptSwitch.Text:
-        return myConceptText;
+      case LanguageConceptSwitch.Varchar:
+        return myConceptVarchar;
       default:
         return null;
     }
   }
 
+  @Override
+  public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
+    return Arrays.asList(myEnumerationOperations);
+  }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
     return myIndexSwitch.index(c);
@@ -124,6 +159,28 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9d91cdL);
     b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/569590123095354462");
     b.version(3);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForAndConstraint() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "AndConstraint", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0b348b4L);
+    b.class_(false, false, false);
+    // extends: DataDictionaryLanguage.structure.ConstraintOperator
+    b.super_(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0b348c8L);
+    b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/1100836963158804660");
+    b.version(3);
+    b.alias("AND");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForBetweenConstraint() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "BetweenConstraint", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0a40303L);
+    b.class_(false, false, false);
+    // extends: DataDictionaryLanguage.structure.ConstraintCriterum
+    b.super_(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0a40301L);
+    b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/1100836963157803779");
+    b.version(3);
+    b.property("number1", 0xf46f562b0a40304L).type(PrimitiveTypeId.INTEGER).origin("1100836963157803780").done();
+    b.property("number2", 0xf46f562b0a40306L).type(PrimitiveTypeId.INTEGER).origin("1100836963157803782").done();
+    b.alias("BETWEEN");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForBoolean() {
@@ -146,12 +203,44 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("CHARACTER");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForComparasionConstraint() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "ComparasionConstraint", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0bcff5bL);
+    b.class_(false, false, false);
+    // extends: DataDictionaryLanguage.structure.ConstraintCriterum
+    b.super_(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0a40301L);
+    b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/1100836963159441243");
+    b.version(3);
+    b.property("number1", 0xf46f562b0bcff68L).type(PrimitiveTypeId.INTEGER).origin("1100836963159441256").done();
+    b.property("operation", 0xf46f562b0bcff6aL).type(MetaIdFactory.dataTypeId(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0b34895L)).origin("1100836963159441258").done();
+    b.alias("COMPARE");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForConstraint() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "Constraint", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9cee07L);
     b.class_(false, false, false);
     b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/569590123094404615");
     b.version(3);
     b.property("description", 0x7e79732fa9cee08L).type(PrimitiveTypeId.STRING).origin("569590123094404616").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForConstraintCriterum() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "ConstraintCriterum", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0a40301L);
+    b.class_(false, false, false);
+    // extends: DataDictionaryLanguage.structure.Constraint
+    b.super_(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9cee07L);
+    b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/1100836963157803777");
+    b.version(3);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForConstraintOperator() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "ConstraintOperator", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0b348c8L);
+    b.class_(false, false, false);
+    // extends: DataDictionaryLanguage.structure.Constraint
+    b.super_(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9cee07L);
+    b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/1100836963158804680");
+    b.version(3);
+    b.aggregate("constraint1", 0xf46f562b0b348c9L).target(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9cee07L).optional(false).ordered(true).multiple(false).origin("1100836963158804681").done();
+    b.aggregate("constraint2", 0xf46f562b0b348cbL).target(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9cee07L).optional(false).ordered(true).multiple(false).origin("1100836963158804683").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDataDictionary() {
@@ -236,6 +325,26 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("elements", 0x7e79732fa9d91d0L).target(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9ceebdL).optional(true).ordered(true).multiple(true).origin("569590123094446544").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForInConstraint() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "InConstraint", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0b34863L);
+    b.class_(false, false, false);
+    // extends: DataDictionaryLanguage.structure.ConstraintCriterum
+    b.super_(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0a40301L);
+    b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/1100836963158804579");
+    b.version(3);
+    b.property("strings", 0xf46f562b0b34864L).type(PrimitiveTypeId.STRING).origin("1100836963158804580").done();
+    b.aggregate("values", 0xf46f562b0b34866L).target(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0b33a2bL).optional(false).ordered(true).multiple(true).origin("1100836963158804582").done();
+    b.alias("IN");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForInValue() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "InValue", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0b33a2bL);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/1100836963158800939");
+    b.version(3);
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForInteger() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "Integer", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9d91c6L);
     b.class_(false, false, false);
@@ -252,6 +361,26 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fb12e15bL);
     b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/569590123102541865");
     b.version(3);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForNotNulConstraint() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "NotNulConstraint", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0ae69c0L);
+    b.class_(false, false, false);
+    // extends: DataDictionaryLanguage.structure.ConstraintCriterum
+    b.super_(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0a40301L);
+    b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/1100836963158485440");
+    b.version(3);
+    b.alias("NOT NULL");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForOrConstraint() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "OrConstraint", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0b348ceL);
+    b.class_(false, false, false);
+    // extends: DataDictionaryLanguage.structure.ConstraintOperator
+    b.super_(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0xf46f562b0b348c8L);
+    b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/1100836963158804686");
+    b.version(3);
+    b.alias("OR");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForPredefinedDomain() {
@@ -301,14 +430,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("fieldDefinitions", 0x7e79732faaeb5e1L).target(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9cedffL).optional(true).ordered(true).multiple(true).origin("569590123095569889").done();
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForText() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "Text", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fba31d89L);
+  private static ConceptDescriptor createDescriptorForVarchar() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DataDictionaryLanguage", "Varchar", 0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fba31d89L);
     b.class_(false, false, false);
     // extends: DataDictionaryLanguage.structure.PredefinedDomain
     b.super_(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fa9d42aeL);
     b.origin("r:13ff4c76-a52d-486f-b493-09a1113f29c7(DataDictionaryLanguage.structure)/569590123111587209");
     b.version(3);
-    b.alias("TEXT");
+    b.alias("VARCHAR");
     return b.create();
   }
 }

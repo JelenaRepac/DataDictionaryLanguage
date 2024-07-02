@@ -24,7 +24,7 @@ public final class FieldDefinition__BehaviorDescriptor extends BaseBHDescriptor 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList();
 
   private static void ___init___(@NotNull SNode __thisNode__) {
-    SLinkOperations.setTarget(__thisNode__, LINKS.domain$Nzv7, SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fba31d89L, "DataDictionaryLanguage.structure.Text")));
+    SLinkOperations.setTarget(__thisNode__, LINKS.domain$Nzv7, SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x83d7e20faa624554L, 0x9cc2d13247d6555eL, 0x7e79732fba31d89L, "DataDictionaryLanguage.structure.Varchar")));
   }
 
 

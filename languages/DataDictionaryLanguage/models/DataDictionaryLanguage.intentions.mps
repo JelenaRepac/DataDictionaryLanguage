@@ -249,7 +249,7 @@
             <node concept="liA8E" id="vB_NbV2Whh" role="2OqNvi">
               <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
               <node concept="Xl_RD" id="vB_NbV2Wje" role="37wK5m">
-                <property role="Xl_RC" value="EXCLUSIVE" />
+                <property role="Xl_RC" value="EXCLUSIVE SPECIALIZATION" />
               </node>
             </node>
           </node>
@@ -276,7 +276,7 @@
             <node concept="liA8E" id="vB_NbV2WZG" role="2OqNvi">
               <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
               <node concept="Xl_RD" id="vB_NbV2X28" role="37wK5m">
-                <property role="Xl_RC" value="NON-EXCLUSIVE" />
+                <property role="Xl_RC" value="NON-EXCLUSIVE SPECIALIZATION" />
               </node>
             </node>
           </node>
