@@ -26,10 +26,19 @@ Domains can be:
 A structure is a composition of components where a component can be a field or another structure.
 There are several types of structures:
 
-**Aggregation of components**: Represents a complex structure of N components. Other structures can also be contained within the aggregation itself. Notation is <a, b, c>.
+**Aggregation of components**: Represents a complex structure of N components. Other structures can also be contained within the aggregation itself. Notation is **<a, b, c>**.
 
-**Exclusive specialization**: Describes a union of components and indicates that only one component can appear in the structure. Notation is [a, b, c].
+**Exclusive specialization**: Describes a union of components and indicates that only one component can appear in the structure. Notation is **[a, b, c]**.
 
-**Non-exclusive specialization**: Represents a union of components and indicates that the structure can have one, two, or all components. Notation is /a, b, c/.
+**Non-exclusive specialization**: Represents a union of components and indicates that the structure can have one, two, or all components. Notation is **/a, b, c/**.
 
-**Set of components**: Represents a collection of multiple values of a single component and indicates that this component can appear multiple times in the corresponding structure. Notation is {a, b, c}.
+**Set of components**: Represents a collection of multiple values of a single component and indicates that this component can appear multiple times in the corresponding structure. Notation is **{a, b, c}**.
+
+# MPS project 
+### Language for creating data dictionary
+
+All concepts are covered which contains one complete data dictionary. When creating dictionary elements, certain constraints and rules are given, by which they respect certain requirements from the real system.
+
+
+
+
